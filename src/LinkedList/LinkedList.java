@@ -49,6 +49,37 @@ public class LinkedList {
         length++;
     }
 
+
+    // Prepend Node To List
+    public void prepend(int value)
+    {
+        Node newNode = new Node(value);
+        if (length == 0) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.next = head;    // Set newNode equal head, head is current number (11)
+            head = newNode;         // And then set head to the current newNode ( if set is 3)
+        }
+        length++;
+    }
+
+    public void addLastIndex(int value)
+    {
+        Node newNode  = new Node(value);
+        if (length == 0) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.next = null;
+            tail.next = newNode;
+            tail = newNode;
+            System.out.println("tail" + tail.value);
+        }
+        length++;
+    }
+
+
     // Remove Last Node
 
     public Node removeLast()
@@ -74,6 +105,8 @@ public class LinkedList {
         }
         return temp;
     }
+
+
 
 
     // PRINT OUT VALUE OF HEAD AND TAIL
