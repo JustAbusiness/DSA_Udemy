@@ -43,13 +43,40 @@ public class LinkedList {
             tail = newNode;
         } else {
             tail.next = newNode;
+//            System.out.println(tail.next.value + " ");
             tail = newNode;
         }
-//        System.out.println("tail" + tail.value);
         length++;
     }
 
+    // Remove Last Node
 
+    public Node removeLast()
+    {
+        if (length == 0) return null;
+        Node temp = head;
+        Node prev = head;
+
+        while (temp.next != null)
+        {
+            prev = temp;
+            temp = temp.next;
+        }
+
+        // If temp is null
+        tail = prev;
+        tail.next = null;
+        length--;       // If length set is if null then equal to 0
+
+        if (length == 0) {
+            head = null;    // Set head, tail to null
+            tail = null;
+        }
+        return temp;
+    }
+
+
+    // PRINT OUT VALUE OF HEAD AND TAIL
 
     public void getHead()
     {
