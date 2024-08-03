@@ -13,10 +13,10 @@ public class Main {
 
         myLinkedList.prepend(5);
 
-        myLinkedList.addLastIndex(10);
-//        System.out.println(myLinkedList.removeLast().value);
-//        System.out.println(myLinkedList.removeLast().value);
-//        System.out.println(myLinkedList.removeLast());
+        myLinkedList.addLastIndex(12);
+
+//        myLinkedList.removeLast();
+        myLinkedList.removeFirst();
 
 
         myLinkedList.printList();

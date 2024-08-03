@@ -58,7 +58,7 @@ public class LinkedList {
             head = newNode;
             tail = newNode;
         } else {
-            newNode.next = head;    // Set newNode equal head, head is current number (11)
+            newNode.next = head;    // Set newNode equal head, indicating that will be the first of list, head is current number (11)
             head = newNode;         // And then set head to the current newNode ( if set is 3)
         }
         length++;
@@ -71,10 +71,10 @@ public class LinkedList {
             head = newNode;
             tail = newNode;
         } else {
-            newNode.next = null;
-            tail.next = newNode;
+            newNode.next = null;   // Sets the next reference of the new node to null, indicating that it will be the last node in the list.
+            tail.next = newNode;  // updates the current tail's next reference to point to the new node.
             tail = newNode;
-            System.out.println("tail" + tail.value);
+//            System.out.println("tail" + tail.value);
         }
         length++;
     }
@@ -106,7 +106,20 @@ public class LinkedList {
         return temp;
     }
 
+    // Remove First Node
+    public Node removeFirst()
+    {
+        if (length == 0) return null;
+        Node temp = head;
+        head = head.next;
+        temp.next = null;
+        length--;
 
+        if (length == 0) {
+            tail = null;
+        }
+        return temp;
+    }
 
 
     // PRINT OUT VALUE OF HEAD AND TAIL
