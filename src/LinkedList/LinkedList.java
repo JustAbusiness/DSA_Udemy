@@ -34,6 +34,23 @@ public class LinkedList {
         }
     }
 
+    // Get Index Of Node
+    public Node get(int index)
+    {
+        if (index < 0 || index >= length)
+        {
+            return null;
+        }
+
+        Node temp = head;
+        for (int i = 0; i < index; i++)
+        {
+            temp = temp.next;
+        }
+        return temp;
+    }
+
+
     // Add New Node To List
     public void append(int value)
     {

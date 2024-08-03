@@ -10,13 +10,17 @@ public class Main {
 //        myLinkedList.getLength();
 
         myLinkedList.append(8);
+        myLinkedList.append(9);
 
-        myLinkedList.prepend(5);
-
-        myLinkedList.addLastIndex(12);
+        System.out.println(myLinkedList.get(1).value + "\n");
+//
+//        myLinkedList.prepend(5);
+//
+//        myLinkedList.addLastIndex(12);
 
 //        myLinkedList.removeLast();
-        myLinkedList.removeFirst();
+
+//        myLinkedList.removeFirst();
 
 
         myLinkedList.printList();
