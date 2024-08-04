@@ -50,6 +50,18 @@ public class LinkedList {
         return temp;
     }
 
+    // Set Index Of Node
+    public boolean set(int index, int value)
+    {
+        Node temp = get(index);
+        if (temp!= null) {
+            temp.value = value;
+            return true;
+        }
+
+        // If index was out of range
+        return false;
+    }
 
     // Add New Node To List
     public void append(int value)
