@@ -11,10 +11,13 @@ public class Main {
 
         myLinkedList.append(8);
         myLinkedList.append(9);
-//        myLinkedList.append(10);
+        myLinkedList.append(10);
 
 
-        myLinkedList.remove(3);
+        myLinkedList.reverse();
+
+//        myLinkedList.remove(3);
+
 //        myLinkedList.insert(0, 6);
 //        myLinkedList.set(2, 11);
 

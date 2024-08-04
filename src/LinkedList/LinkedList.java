@@ -174,7 +174,7 @@ public class LinkedList {
         // If temp is null
         tail = prev;
         tail.next = null;
-        length--;       // If length set if null then equal to 0
+        length--;       // If length set is null then equal to 0
 
         if (length == 0) {
             head = null;    // Set head, tail to null
@@ -198,6 +198,22 @@ public class LinkedList {
         return temp;
     }
 
+    // Reverse linked list
+    public void reverse()
+    {
+        Node temp = head;
+        head = tail;
+        tail = temp;
+
+        Node after = temp.next;
+        Node before = null;
+        for (int i = 0; i < length; i++) {
+           after = temp.next;
+           temp.next = before;
+           before = temp;
+           temp = after;
+        }
+    }
 
     // PRINT OUT VALUE OF HEAD AND TAIL
 
