@@ -14,7 +14,8 @@ public class Main {
 //        myLinkedList.append(10);
 
 
-        myLinkedList.insert(0, 6);
+        myLinkedList.remove(3);
+//        myLinkedList.insert(0, 6);
 //        myLinkedList.set(2, 11);
 
 //        System.out.println(myLinkedList.get(0).value + "\n");
