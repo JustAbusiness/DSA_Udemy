@@ -11,9 +11,11 @@ public class Main {
 
         myLinkedList.append(8);
         myLinkedList.append(9);
-        myLinkedList.append(10);
+//        myLinkedList.append(10);
 
-        myLinkedList.set(2, 11);
+
+        myLinkedList.insert(0, 6);
+//        myLinkedList.set(2, 11);
 
 //        System.out.println(myLinkedList.get(0).value + "\n");
 //
